@@ -16,9 +16,9 @@ if exists("g:hindent_autoload")
     augroup END
 endif
 
-noremap <unique><script> <Plug>HindentToggle :call hindent#toggle()
-noremap <unique><script> <Plug>HindentEnable :call hindent#enable()
-noremap <unique><script> <Plug>HindentDisable :call hindent#disable()
+noremap <script> <Plug>HindentToggle :call hindent#toggle()
+noremap <script> <Plug>HindentEnable :call hindent#enable()
+noremap <script> <Plug>HindentDisable :call hindent#disable()
 
 command HindentEnable :call hindent#enable()
 command HindentToggle :call hindent#toggle()
