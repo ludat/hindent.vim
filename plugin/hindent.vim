@@ -10,10 +10,12 @@ if !exists('g:hindent_ignore_first')
 endif
 
 if exists("g:hindent_autoload")
-    augroup Hindent_indents
-        autocmd!
-        autocmd VimEnter * call hindent#enable()
-    augroup END
+    if g:hindent_autoload
+        augroup Hindent_indents
+            autocmd!
+            autocmd VimEnter * call hindent#enable()
+        augroup END
+    endif
 endif
 
 noremap <script> <Plug>HindentToggle :call hindent#toggle()
