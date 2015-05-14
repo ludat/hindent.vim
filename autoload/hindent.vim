@@ -8,9 +8,9 @@ endfunction
 
 function! hindent#enable ()
     " add background for indents
-    call add(w:indent_match_list, matchadd("indentL", '^\(	\| \{' . &tabstop . '\}\)\+'))
+    call add(w:indent_match_list, matchadd("HindentOdd", '^\(	\| \{' . &tabstop . '\}\)\+'))
     " add background for even highlights
-    call add(w:indent_match_list, matchadd("indentR", '\(	\| \{' . &tabstop . '\}\)\zs\1'))
+    call add(w:indent_match_list, matchadd("HindentEven", '\(	\| \{' . &tabstop . '\}\)\zs\1'))
     " ignore first two levels of indentation
     if g:hindent_ignore_first > 0
         call add(w:indent_match_list, matchadd("Ignore", '^\(	\| \{' . &tabstop . '\}\)\{1,' . w:hindent_ignore_first . '\}'))
