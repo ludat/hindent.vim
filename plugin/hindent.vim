@@ -1,5 +1,4 @@
 if exists("g:loaded_Hindent") || &compatible
-    echom "NOPE"
     finish
 endif
 let g:loaded_hindent = 1
