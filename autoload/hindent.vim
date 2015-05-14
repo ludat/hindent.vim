@@ -13,7 +13,7 @@ function! hindent#enable ()
     call add(w:indent_match_list, matchadd("HindentEven", '\(	\| \{' . &tabstop . '\}\)\zs\1'))
     " ignore first two levels of indentation
     if g:hindent_ignore_first > 0
-        call add(w:indent_match_list, matchadd("Ignore", '^\(	\| \{' . &tabstop . '\}\)\{1,' . w:hindent_ignore_first . '\}'))
+        call add(w:indent_match_list, matchadd("Ignore", '^\(	\| \{' . &tabstop . '\}\)\{1,' . g:hindent_ignore_first . '\}'))
     endif
 endfunction
 
