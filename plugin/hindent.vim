@@ -29,4 +29,5 @@ noremap <script> <Plug>HindentDisable :call hindent#disable()
 
 command! HindentEnable :call hindent#enable()
 command! HindentToggle :call hindent#toggle()
+command! HindentReload :call hindent#toggle()
 command! HindentDisable :call hindent#disable()
